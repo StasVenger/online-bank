@@ -6,12 +6,8 @@
 </template>
 
 <script>
-import TheNavBar from "@/components/TheNavBar";
+import TheNavBar from '@/components/TheNavBar';
 export default {
   components: {TheNavBar}
 }
 </script>
-
-<style scoped>
-
-</style>
