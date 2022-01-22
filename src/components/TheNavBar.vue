@@ -12,18 +12,26 @@
         <a href="#">Сообщения</a>
       </li>
       <li>
-        <a href="#">Выход</a>
+        <a href="#" @click.prevent="logout">Выход</a>
       </li>
     </ul>
   </nav>
 </template>
 
 <script>
+import {useRouter} from "vue-router";
+import {useStore} from "vuex";
 export default {
-name: "TheNavBar"
+  setup() {
+    const store = useStore();
+    const router = useRouter();
+
+    return {
+      logout: () => {
+        store.commit('auth/logout')
+        router.push('/auth')
+      }
+    }
+  }
 }
 </script>
-
-<style scoped>
-
-</style>
