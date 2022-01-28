@@ -19,7 +19,7 @@ export default createStore({
       state.message = message
     },
     clearMessage(state) {
-      state.messsage = null
+      state.message = null
     }
   },
   actions: {
