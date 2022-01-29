@@ -5,7 +5,7 @@
     </div>
     <div class="form-control">
       <select v-model="status">
-        <option disabled selected>Выберите статус</option>
+        <option disabled value="">Выберите статус</option>
         <option value="done">Завершен</option>
         <option value="cancelled">Отменен</option>
         <option value="active">Активен</option>
@@ -23,7 +23,7 @@ export default {
   props: ['modelValue'],
   setup(_, {emit}) {
     const name = ref()
-    const status = ref()
+    const status = ref(null)
 
     watch([name, status], values => {
       emit('update:modelValue', {

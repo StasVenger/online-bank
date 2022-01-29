@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import {ref, computed, onMounted, watch} from 'vue';
+import {ref, computed, onMounted} from 'vue';
 import {useStore} from 'vuex';
 import AppPage from '@/components/ui/AppPage';
 import RequestTable from '@/components/request/RequestTable';

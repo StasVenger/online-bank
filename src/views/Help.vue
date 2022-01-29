@@ -1,5 +1,25 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+  <app-page back title="Помощь">
+    <question-item
+      v-for="question in questions"
+      :key="question.title"
+      :question="question"
+    ></question-item>
+  </app-page>
 </template>
+
+<script>
+import AppPage from '@/components/ui/AppPage';
+import QuestionItem from '@/components/question/QuestionItem';
+export default {
+  setup() {
+    const questions = [
+      {title: 'Что есть в данной системе?', text: 'Тут есть все, для того, чтобы смотреть, какие заявки были созданы.'},
+      {title: 'Как тут работает авторизация?', text: 'Все реализовано через Firebase.'}
+    ]
+
+    return {questions}
+  },
+  components: {AppPage, QuestionItem}
+}
+</script>

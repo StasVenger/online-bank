@@ -1,5 +1,6 @@
 <template>
-  <the-nav-bar></the-nav-bar>
+  <the-nav-bar />
+  <the-sidebar />
   <div class="container with-nav">
     <app-message />
     <router-view />
@@ -9,7 +10,8 @@
 <script>
 import TheNavBar from '@/components/TheNavBar';
 import AppMessage from '@/components/ui/AppMessage';
+import TheSidebar from '@/components/TheSidebar';
 export default {
-  components: {TheNavBar, AppMessage}
+  components: {TheNavBar, AppMessage, TheSidebar}
 }
 </script>
